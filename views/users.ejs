@@ -17,6 +17,9 @@
                     <th>Name</th>
                     <th>Email</th>
                     <th>Role</th>
+                    <th></th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +28,9 @@
                         <td><%= user.name %></td>
                         <td><%= user.email %></td>
                         <td><%= user.role %></td>
+                        <td><a href="/users/<%= user.id %>">View</a></td>
+                        <td><a href="/users/update/<%= user.id %>">Edit</a></td>
+                        <td><a href="/users/delete/<%= user.id %>">Delete</a></td>
                     </tr>
                 <% }); %>
             </tbody>

@@ -37,17 +37,24 @@ router.get('/update/:id', (req, res) => {
 });
 
 // Update a user by ID
-router.put('/:id', (req, res) => {
+router.post('/update/:id', (req, res) => {
   const updatedUser = userService.updateUser(parseInt(req.params.id), req.body);
   if (!updatedUser) return res.status(404).send('User not found');
-  res.redirect('/' + updatedUser.id)
+  res.redirect('/users/' + updatedUser.id)
+});
+
+// Delete a user by ID form
+router.get('/delete/:id', (req, res) => {
+  const user = userService.getUserById(parseInt(req.params.id));
+  if (!user) return res.status(404).send('User not found');
+  res.render('deleteUser', {user: user})
 });
 
 // Delete a user by ID
-router.delete('/users/:id', (req, res) => {
+router.post('/delete/:id', (req, res) => {
   const deletedUser = userService.deleteUser(parseInt(req.params.id));
   if (!deletedUser) return res.status(404).send('User not found');
-  res.redirect('/')
+  res.redirect('/users')
 });
 
 module.exports = router;

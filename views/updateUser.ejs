@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add New User</title>
+    <title>Update User</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Add New User</h1>
+    <h1>Update User</h1>
 
-    <form action="/users/add" method="post">
+    <form action="/users/update/<%= user.id %>" method="post">
         <label for="name">Name:</label><br>
-        <input type="name" id="name" name="name"><br>
+        <input type="text" id="name" name="name" value="<%= user.name %>"><br>
 
         <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
+        <input type="email" id="email" name="email" value="<%= user.email %>"><br>
 
         <label for="role">Role:</label><br>
-        <input type="role" id="role" name="role"><br>
+        <input type="text" id="role" name="role" value="<%= user.role %>"><br>
 
         <input type="submit" value="Submit">
     </form> 

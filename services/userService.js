@@ -52,9 +52,10 @@ class UserService {
         const userIndex = users.findIndex(user => user.id === id);
         if (userIndex === -1) return null;
 
-        users[userIndex] = { ...users[userIndex], ...updatedUser };
+        updatedUser.id = id;
+        users[userIndex] = updatedUser;
         this.writeUsers(users);
-        return users[userIndex];
+        return updatedUser;
     }
 
     // Delete a user by ID
