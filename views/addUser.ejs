@@ -1,0 +1,29 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Add New User</h1>
+
+    <form action="/users/add" method="post">
+        <label for="id">ID:</label><br>
+        <input type="text" id="id" name="id"><br>
+
+        <label for="name">Name:</label><br>
+        <input type="name" id="name" name="name"><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+
+        <label for="role">Role:</label><br>
+        <input type="role" id="role" name="role"><br>
+
+        <input type="submit" value="Submit">
+    </form> 
+</body>
+</html>
