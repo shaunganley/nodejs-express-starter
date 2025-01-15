@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee List</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
+  <body>
+    <h1>Employee List</h1>
+
+    <a href="/addUser" class="btn btn-add">Add Employee</a>
+
+    <% if (employees && employees.length > 0) { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Actions</th>
+          <th>Employee Number</th>
+          <th>Surname</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% employees.forEach(employee => { %>
+        <tr>
+          <td>
+            <a href="/employees/edit/<%= employee.id %>" class="btn btn-edit"
+              >Edit</a
+            >
+          </td>
+          <td><%= employee.employeeNumber %></td>
+          <td><%= employee.surname %></td>
+          <td><%= employee.name %></td>
+          <td><%= employee.email %></td>
+          <td><%= employee.role %></td>
+          <td><%= employee.salary %></td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <% } else { %>
+    <p>No employees found.</p>
+    <% } %>
+  </body>
+</html>
