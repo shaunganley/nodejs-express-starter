@@ -1,0 +1,34 @@
+[
+    {
+      "id": 1,
+      "name": "Shaun",
+      "email": "shaun@test.com",
+      "salary": 500000,
+      "role": "Software Engineer",
+      "employeeNumber": "EZ01"
+    },
+    {
+        "id": 2,
+        "name": "Peter",
+        "email": "peter@test.com",
+        "salary": 250000,
+        "role": "Software Engineer",
+        "employeeNumber": "EZ02"
+      },
+      {
+        "id": 3,
+        "name": "Petunia",
+        "email": "petunia@test.com",
+        "salary": 550000,
+        "role": "Software Engineer",
+        "employeeNumber": "EZ03"
+      },
+      {
+        "id": 4,
+        "name": "Paulina",
+        "email": "paulina@test.com",
+        "salary": 230000,
+        "role": "Software Engineer",
+        "employeeNumber": "EZ04"
+      }
+  ]
