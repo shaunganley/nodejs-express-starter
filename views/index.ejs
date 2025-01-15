@@ -1,11 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+<%- include ('html_head')%>
+<body>
+  <div id="content_matt">
+  <%- include('navigation')%>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-  </body>
+    <!--Content-->
+  
+  </div>
+  <%- include ('footer')%>
+ </body>
 </html>

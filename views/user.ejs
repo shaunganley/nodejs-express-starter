@@ -1,13 +1,7 @@
-<!-- index.ejs -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Information</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<%- include ('html_head',{title: 'User Information'})%>
 <body>
+    <div id="content_matt">
+    <%- include('navigation')%>
     <h1>User Information</h1>
 
     <% if (user) { %>
@@ -30,7 +24,7 @@
     <% } else { %>
         <p>No user found.</p>
     <% } %>
-
-    
+</div>
+<%- include ('footer')%>
 </body>
 </html>
