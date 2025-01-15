@@ -5,7 +5,7 @@ class UserService {
     constructor() {
         this.filePath = "users.json";
         // add employee file - RB
-        this.employeeFile = "employee.json"
+        this.employeeFile = "employee.json";
     }
 
     // Helper function to read users from JSON file
