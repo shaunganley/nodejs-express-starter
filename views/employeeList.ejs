@@ -1,0 +1,40 @@
+<!-- US001 - View Employees -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Employees List</h1>
+
+    <% if (employees && employees.length > 0) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Number</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Role</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% employees.forEach(employee => { %>
+                    <tr>
+                        <td><%= employee.number %></td>
+                        <td><%= employee.name %></td>
+                        <td><%= employee.address %></td>
+                        <td><%= employee.role %></td>
+                        <td><%= employee.salary %></td>
+                    </tr>
+                <% }); %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No employees found.</p>
+    <% } %>
+</body>
+</html>
