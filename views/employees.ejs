@@ -9,14 +9,15 @@
   <body>
     <h1>Employee List</h1>
 
-    <a href="/employees/add" class="btn btn-add">Add Employee</a>
+    <a href="/addUser" class="btn btn-add">Add Employee</a>
 
     <% if (employees && employees.length > 0) { %>
     <table>
       <thead>
         <tr>
           <th>Actions</th>
-          <th>ID</th>
+          <th>Employee Number</th>
+          <th>Surname</th>
           <th>Name</th>
           <th>Email</th>
           <th>Role</th>
@@ -31,7 +32,8 @@
               >Edit</a
             >
           </td>
-          <td><%= employee.id %></td>
+          <td><%= employee.employeeNumber %></td>
+          <td><%= employee.surname %></td>
           <td><%= employee.name %></td>
           <td><%= employee.email %></td>
           <td><%= employee.role %></td>
