@@ -81,7 +81,7 @@ p {
   cursor: pointer;
 }
 
-.btn-edit {
+.btn {
   background-color: #005EB8; /* Blue color for edit button */
 }
 
@@ -89,6 +89,6 @@ p {
   background-color: #004a8d; /* Darker blue on hover */
 }
 
-.btn-edit:hover {
-  background-color: #014483; /* Darker blue on hover */
+.btn-add {
+  margin-left: 50px;
 }
