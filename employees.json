@@ -1,0 +1,37 @@
+[
+  {
+    "name": "Shaun",
+    "email": "shaun@test.com",
+    "salary": "123456798",
+    "role": "Software Engineer",
+    "id": 1
+  },
+  {
+    "name": "Alice",
+    "email": "alice@test.com",
+    "salary": "987654321",
+    "role": "Product Manager",
+    "id": 2
+  },
+  {
+    "name": "Bob",
+    "email": "bob@test.com",
+    "salary": "654321987",
+    "role": "UX Designer",
+    "id": 3
+  },
+  {
+    "name": "Charlie",
+    "email": "charlie@test.com",
+    "salary": "456789123",
+    "role": "Data Scientist",
+    "id": 4
+  },
+  {
+    "name": "Diana",
+    "email": "diana@test.com",
+    "salary": "321654987",
+    "role": "DevOps Engineer",
+    "id": 5
+  }
+]
