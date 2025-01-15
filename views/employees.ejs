@@ -13,6 +13,8 @@
     <table>
       <thead>
         <tr>
+          <th>Actions</th>
+          <th>ID</th>
           <th>Name</th>
           <th>Email</th>
           <th>Role</th>
@@ -22,6 +24,12 @@
       <tbody>
         <% employees.forEach(employee => { %>
         <tr>
+          <td>
+            <a href="/employees/edit/<%= employee.id %>" class="btn btn-edit"
+              >Edit</a
+            >
+          </td>
+          <td><%= employee.id %></td>
           <td><%= employee.name %></td>
           <td><%= employee.email %></td>
           <td><%= employee.role %></td>
