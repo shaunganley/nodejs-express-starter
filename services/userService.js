@@ -4,6 +4,8 @@ const fs = require('fs');
 class UserService {
     constructor() {
         this.filePath = "users.json";
+        // add employee file - RB
+        this.employeeFile = "employee.json"
     }
 
     // Helper function to read users from JSON file
@@ -23,6 +25,17 @@ class UserService {
             fs.writeFileSync(this.filePath, JSON.stringify(users, null, 2), 'utf8');
         } catch (err) {
             console.error('Error writing users:', err);
+        }
+    }
+
+    // Helper function to read employees from JSON file -RB
+    readEmployees() {
+        try {
+            const data = fs.readFileSync(this.employeeFile, 'utf8');
+            return JSON.parse(data);
+        } catch (err) {
+            console.error('Error reading employees:', err);
+            return [];
         }
     }
 
@@ -67,6 +80,11 @@ class UserService {
         const deletedUser = users.splice(userIndex, 1);
         this.writeUsers(users);
         return deletedUser[0];
+    }
+
+    // Get all employees -RB
+    getAllEmployees() {
+        return this.readEmployees();
     }
 }
 
