@@ -83,7 +83,7 @@ class UserService {
     }
 
     // Get all employees -RB
-    getAllEmployees() {
+    getEmployees() {
         return this.readEmployees();
     }
 }

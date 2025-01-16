@@ -6,8 +6,8 @@ const userService = new UserService();
 
 
 // Read all employees
-router.get('/employees', (req, res) => {
-  const employees = userService.getAllEmployees();
+router.get('/', (req, res) => {
+  const employees = userService.getEmployees();
   res.render('employeeList', { employees: employees })
 })
 
