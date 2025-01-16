@@ -24,6 +24,10 @@
                         <td><%= employee.address %></td>
                         <td><%= employee.role %></td>
                         <td><%= employee.salary %></td>
+                        <!-- US014 -->
+                        <td><a href="/employees/<%= employee.number %>">View</a></td>
+                        <!-- US003 -->
+                        <td><a href="/employees/update/<%= employee.number %>">Edit</a></td>
                     </tr>
                 <% }); %>
             </tbody>
@@ -31,6 +35,7 @@
     <% } else { %>
         <p>No employees found.</p>
     <% } %>
+    <!-- US002 -->
     <form action="/employees/add" method="get">
         <input type="submit" value="Create New Employee">
     </form>

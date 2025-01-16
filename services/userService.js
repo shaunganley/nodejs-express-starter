@@ -115,18 +115,18 @@ class UserService {
         return employees.find(employee => employee.number === number);
     }
 
-    // // US003
-    // // Update an employee by employee number
-    // updateEmployee(employeeNumber, updatedEmployee) {
-    //     const employees = this.readEmployees();
-    //     const employeeIndex = employees.findIndex(employee => employee.number === employeeNumber);
-    //     if (employeeIndex === -1) return null;
+    // US003
+    // Update an employee by employee number
+    updateEmployee(employeeNumber, updatedEmployee) {
+        const employees = this.readEmployees();
+        const employeeIndex = employees.findIndex(employee => employee.number === employeeNumber);
+        if (employeeIndex === -1) return null;
 
-    //     updatedEmployee.number = employeeNumber;
-    //     employees[employeeIndex] = updatedEmployee;
-    //     this.writeEmployees(employees);
-    //     return updatedEmployee;
-    // }
+        updatedEmployee.number = employeeNumber;
+        employees[employeeIndex] = updatedEmployee;
+        this.writeEmployees(employees);
+        return updatedEmployee;
+    }
 }
 
 module.exports = UserService;

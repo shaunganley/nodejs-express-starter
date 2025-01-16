@@ -22,14 +22,15 @@
                     <td><%= employee.address %></td>
                     <td><%= employee.role %></td>
                     <td><%= employee.salary %></td>
+                    <!-- US003 -->
+                    <td><a href="/employees/update/<%= employee.number %>">Edit</a></td>
                 </tr>
             </tbody>
         </table>
     <% } else { %>
         <p>No employee found.</p>
-        <!-- if no employee found, show employee list -->
-        <a href="/employees">View Employees</a>
     <% } %>
+    <a href="/employees">View All Employees</a>
 </div>
 <%- include ('footer')%>
 </body>

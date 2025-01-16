@@ -28,22 +28,22 @@ router.post('/add', (req, res) => {
 router.get('/:number', (req, res) => {
   const employee = userService.getEmployeeByNumber(parseInt(req.params.number));
   //if (!employee) return res.status(404).send('Employee not found');
-  res.render('employee', { employee: employee })
+  res.render('employee', {employee: employee})
 });
 
 // US003
-// Update an employee by ID form
-// router.get('/update/:id', (req, res) => {
-//   const user = userService.getUserById(parseInt(req.params.id));
-//   if (!user) return res.status(404).send('User not found');
-//   res.render('updateUser', {user: user})
-// });
+// Update an employee by employee number form
+router.get('/update/:number', (req, res) => {
+  const employee = userService.getEmployeeByNumber(parseInt(req.params.number));
+  if (!employee) return res.status(404).send('Employee not found');
+  res.render('updateEmployee', {employee: employee})
+});
 
-// // Update a user by ID
-// router.post('/update/:id', (req, res) => {
-//   const updatedUser = userService.updateUser(parseInt(req.params.id), req.body);
-//   if (!updatedUser) return res.status(404).send('User not found');
-//   res.redirect('/users/' + updatedUser.id)
-// });
+// Update an employee by employee number
+router.post('/update/:number', (req, res) => {
+  const updatedEmployee = userService.updateEmployee(parseInt(req.params.number), req.body);
+  if (!updatedEmployee) return res.status(404).send('Employee not found');
+  res.redirect('/employees/' + updatedEmployee.number)
+});
 
 module.exports = router;

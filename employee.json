@@ -1,10 +1,10 @@
 [
   {
-    "number": 1,
     "name": "Alana",
     "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
     "role": "Software Engineer Intern",
-    "salary": 0
+    "salary": "0",
+    "number": 1
   },
   {
     "number": 2,
@@ -21,18 +21,18 @@
     "salary": 0
   },
   {
-    "number": 4,
     "name": "Matthew",
     "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
     "role": "Software Engineer Intern",
-    "salary": 0
+    "salary": "0",
+    "number": 4
   },
   {
-    "number": 5,
     "name": "Michael",
     "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
     "role": "Software Engineer Intern",
-    "salary": 0
+    "salary": "0",
+    "number": 5
   },
   {
     "name": "Test",
