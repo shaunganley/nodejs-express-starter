@@ -1,13 +1,8 @@
 <!-- US001 - View Employees -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User List</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<%- include ('html_head',{title: 'All Employees'})%>
 <body>
+    <div id="content_matt">
+    <%- include('navigation')%>
     <h1>Employees List</h1>
 
     <% if (employees && employees.length > 0) { %>
@@ -36,5 +31,7 @@
     <% } else { %>
         <p>No employees found.</p>
     <% } %>
+    </div>
+    <%- include ('footer')%>
 </body>
 </html>
