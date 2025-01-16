@@ -127,6 +127,18 @@ class UserService {
         this.writeEmployees(employees);
         return updatedEmployee;
     }
+
+    // US004
+    // Delete an employee by employee number
+    deleteEmployee(number) {
+        const employees = this.readEmployees();
+        const employeeIndex = employees.findIndex(employee => employee.number === number);
+        if (employeeIndex === -1) return null;
+
+        const deletedEmployee = employees.splice(employeeIndex, 1);
+        this.writeEmployees(employees);
+        return deletedEmployee[0];
+    } 
 }
 
 module.exports = UserService;

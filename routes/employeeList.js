@@ -46,4 +46,19 @@ router.post('/update/:number', (req, res) => {
   res.redirect('/employees/' + updatedEmployee.number)
 });
 
+// US004
+// Delete an employee by employee number form
+router.get('/delete/:number', (req, res) => {
+  const employee = userService.getEmployeeByNumber(parseInt(req.params.number));
+  if (!employee) return res.status(404).send('Employee not found');
+  res.render('deleteEmployee', {employee: employee})
+});
+
+// Delete an employee by employee number
+router.post('/delete/:number', (req, res) => {
+  const deletedEmployee = userService.deleteEmployee(parseInt(req.params.number));
+  if (!deletedEmployee) return res.status(404).send('Employee not found');
+  res.redirect('/employees')
+}); 
+
 module.exports = router;

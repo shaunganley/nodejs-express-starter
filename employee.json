@@ -40,12 +40,5 @@
     "role": "Test",
     "salary": "Test",
     "number": 6
-  },
-  {
-    "name": "Test Again",
-    "address": "Test Again",
-    "role": "Test Again",
-    "salary": "Test Again",
-    "number": 7
   }
 ]
