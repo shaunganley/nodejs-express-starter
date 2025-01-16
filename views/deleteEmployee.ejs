@@ -1,0 +1,21 @@
+<%- include ('html_head',{title: 'Delete Employee'})%>
+<body>
+    <div id="content_matt">
+    <%- include('navigation')%>
+    <h1>Delete Employee</h1>
+
+    <form action="/employees/delete/<%= employee.number %>" method="post">
+        <h3>
+            Are you sure you want to delete <%= employee.name %>?
+        </h3>
+        <label for="password">Enter password to confirm:</label><br>
+        <input type="password" id="password" name="password"><br>
+
+        <input type="submit" value="Submit">
+        <a href="/employees">Cancel</a>
+    </form>
+</div>
+    <%- include ('footer')%>
+
+</body>
+</html>
