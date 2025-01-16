@@ -1,0 +1,26 @@
+<!-- US003 -->
+<%- include ('html_head',{title: 'Update Employee'})%>
+<body>
+    <div id="content_matt">
+    <%- include('navigation')%>
+    <h1>Update Employee</h1>
+
+    <form action="/employees/update/<%= employee.number %>" method="post">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" value="<%= employee.name %>"><br>
+
+        <label for="address">Address:</label><br>
+        <input type="address" id="address" name="address" value="<%= employee.address %>"><br>
+
+        <label for="role">Role:</label><br>
+        <input type="role" id="role" name="role" value="<%= employee.role %>"><br>
+
+        <label for="salary">Salary:</label><br>
+        <input type="salary" id="salary" name="salary" value="<%= employee.salary %>"><br>
+
+        <input type="submit" value="Submit">
+    </form> 
+</div>
+<%- include ('footer')%>
+</body>
+</html>
