@@ -1,37 +1,51 @@
 [
-    {
-      "number": 1,
-      "name": "Alana",
-      "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
-      "role": "Software Engineer Intern",
-      "salary": 0.00
-    },
-    {
-      "number": 2,
-      "name": "Katie",
-      "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
-      "role": "Software Engineer Intern",
-      "salary": 0.00
-    },
-    {
-      "number": 3,
-      "name": "Lena",
-      "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
-      "role": "Software Engineer Intern",
-      "salary": 0.00
-    },
-    {
-      "number": 4,
-      "name": "Matthew",
-      "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
-      "role": "Software Engineer Intern",
-      "salary": 0.00
-    },
-    {
-      "number": 5,
-      "name": "Michael",
-      "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
-      "role": "Software Engineer Intern",
-      "salary": 0.00
-    }
+  {
+    "number": 1,
+    "name": "Alana",
+    "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
+    "role": "Software Engineer Intern",
+    "salary": 0
+  },
+  {
+    "number": 2,
+    "name": "Katie",
+    "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
+    "role": "Software Engineer Intern",
+    "salary": 0
+  },
+  {
+    "number": 3,
+    "name": "Lena",
+    "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
+    "role": "Software Engineer Intern",
+    "salary": 0
+  },
+  {
+    "number": 4,
+    "name": "Matthew",
+    "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
+    "role": "Software Engineer Intern",
+    "salary": 0
+  },
+  {
+    "number": 5,
+    "name": "Michael",
+    "address": "Kainos, 2nd Floor, 21 Farringdon Road, Clerkenwell, London, EC1M 3HA, United Kingdom",
+    "role": "Software Engineer Intern",
+    "salary": 0
+  },
+  {
+    "name": "Test",
+    "address": "Test",
+    "role": "Test",
+    "salary": "Test",
+    "number": 6
+  },
+  {
+    "name": "Test Again",
+    "address": "Test Again",
+    "role": "Test Again",
+    "salary": "Test Again",
+    "number": 7
+  }
 ]

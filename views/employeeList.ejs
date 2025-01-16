@@ -31,6 +31,9 @@
     <% } else { %>
         <p>No employees found.</p>
     <% } %>
+    <form action="/employees/add" method="get">
+        <input type="submit" value="Create New Employee">
+    </form>
     </div>
     <%- include ('footer')%>
 </body>

@@ -1,0 +1,36 @@
+<%- include ('html_head',{title: 'User Information'})%>
+<body>
+    <div id="content_matt">
+    <%- include('navigation')%>
+    <h1>Employee Information</h1>
+
+    <% if (employee) { %>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee Number</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Role</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= employee.number %></td>
+                    <td><%= employee.name %></td>
+                    <td><%= employee.address %></td>
+                    <td><%= employee.role %></td>
+                    <td><%= employee.salary %></td>
+                </tr>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No employee found.</p>
+        <!-- if no employee found, show employee list -->
+        <a href="/employees">View Employees</a>
+    <% } %>
+</div>
+<%- include ('footer')%>
+</body>
+</html>
