@@ -1,26 +1,53 @@
 <!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New User</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./media/favicon.png">
+    <link rel="stylesheet" href="viewdesign.css">
 </head>
+
 <body>
-    <h1>Add New User</h1>
 
-    <form action="/users/add" method="post">
-        <label for="name">Name:</label><br>
-        <input type="name" id="name" name="name"><br>
+    <div class="adduserpage">
+        <img src="./media/Kainos 800x250 Logo (Transparent BG).png" alt="kainos_logo">
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
+        <div class="addnewuser">
+            <h1>Add New User</h1>
+        </div>
 
-        <label for="role">Role:</label><br>
-        <input type="role" id="role" name="role"><br>
 
-        <input type="submit" value="Submit">
-    </form> 
+        <div class="infoboxes">
+            <form action="/users/add" method="post">
+                <label for="name">Name:</label><br>
+                <input type="name" id="name" name="name"><br>
+
+                <label for="address">Address:</label><br>
+                <input type="address" id="address" name="address"><br>
+
+                <label for="salary">Salary:</label><br>
+                <input type="salary" id="salary" name="salary"><br>
+
+                <label for="role">Role:</label><br>
+                <input type="role" id="role" name="role"><br>
+
+                <label for="employeenumber">Employee Number:</label><br>
+                <input type="employeenumber" id="employeenumber" name="employeenumber"><br>
+
+                <div class="spacebelowinfo">
+                    
+                </div>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+
+
 </body>
+
 </html>
