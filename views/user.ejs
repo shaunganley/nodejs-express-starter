@@ -1,36 +1,76 @@
-<!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Information</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.0/css/all.min.css'>
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+
 <body>
-    <h1>User Information</h1>
 
-    <% if (user) { %>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><%= user.name %></td>
-                    <td><%= user.email %></td>
-                    <td><%= user.role %></td>
-                </tr>
-            </tbody>
-        </table>
-    <% } else { %>
-        <p>No user found.</p>
-    <% } %>
 
-    
+    <div class="card-container">
+        <div class="user-header">
+            <img src="https://thispersondoesnotexist.com/" alt="user" class="user-image" />
+            <div class="user-info">
+                <h3>
+                    <%= user.name %>
+                </h3>
+
+                <h6>
+                    <%= user.office %>
+                </h6>
+            </div>
+        </div>
+
+        <div class="user-details">
+            <hr>
+            <div class="detail-section">
+                <h6>Email</h6>
+                <p>
+                    <%= user.email %>
+                </p>
+            </div>
+            <hr>
+            <div class="detail-section">
+                <h6>Address</h6>
+                <p>
+                    <%= user.address %>
+                </p>
+            </div>
+            <hr>
+            <div class="detail-section">
+                <h6>Role</h6>
+                <p>
+                    <%= user.role %>
+                </p>
+            </div>
+            <hr>
+            <div class="detail-section">
+                <h6>Salary</h6>
+                <p>
+                    <%= user.salary %>
+                </p>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="primary">
+                Send Email
+            </button>
+            <button class="primary ghost">
+                Edit details
+            </button>
+        </div>
+    </div>
+
+    <footer>
+        <p class="f1"> Kainos 4-6 Upper Cres, Belfast BT7 1NT</p>
+    </footer>
 </body>
+
 </html>

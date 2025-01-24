@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+<head>
+
+<body>
+  <title>
+    <%= title %>
+  </title>
+  <link rel="icon" href="/images/favicon.png" type="image/png">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+
   </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+  <header class="top-section">
+    <div class="logo">
+      <img src="/images/Kainos 800x250 Logo (Transparent BG).png" alt="Company-Logo" class="Company-Logo" />
+    </div>
+    <h1 class="hometitle">
+      <%= title %>
+    </h1>
+
+  </header>
+
+  <container class="main-section">
+    <p class="welcome">Welcome to <%= title %>
+    </p>
+    <div class="buttons">
+      <a href="/login" class="login-button">
+        Login
+      </button>
+    </div>
+  </container>
+
+
+  <footer>
+    <p class="f1"> Kainos 4-6 Upper Cres, Belfast BT7 1NT</p>
+  </footer>
+</body>
+
+</html>
+
 </html>

@@ -4,18 +4,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete User</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Delete Employee</title>
+    <script>
+
+        function confirmDeletion(event) {
+            const confirmed = confirm("Are you sure you want to delete this employee?");
+            if (!confirmed) {
+                event.preventDefault();
+            }
+        }
+ 
+
+        function stylePage() {
+            const body = document.querySelector('body');
+            body.style.height = "100vh";
+            body.style.margin = "0";
+            body.style.display = "flex";
+            body.style.flexDirection = "column";
+            body.style.alignItems = "center";
+            body.style.justifyContent = "center";
+ 
+            const formContainer = document.querySelector('.form-container');
+            formContainer.style.textAlign = "center";
+        }
+ 
+        // Function to style the buttons
+        function styleButtons() {
+
+            const deleteButton = document.querySelector('input[type="submit"]');
+            deleteButton.style.padding = "10px 20px";
+            deleteButton.style.backgroundColor = "red";
+            deleteButton.style.color = "white";
+            deleteButton.style.border = "none";
+            deleteButton.style.cursor = "pointer";
+            deleteButton.style.fontSize = "16px";
+            deleteButton.style.borderRadius = "5px";
+            deleteButton.style.marginLeft = "10px";
+ 
+
+            deleteButton.onmouseover = function() {
+                deleteButton.style.backgroundColor = "darkgray";
+            };
+            deleteButton.onmouseout = function() {
+                deleteButton.style.backgroundColor = "red";
+            };
+ 
+
+            const cancelButton = document.querySelector('.cancel-button');
+            cancelButton.style.padding = "10px 20px";
+            cancelButton.style.backgroundColor = "blue";
+            cancelButton.style.color = "white";
+            cancelButton.style.border = "none";
+            cancelButton.style.fontSize = "16px";
+            cancelButton.style.cursor = "pointer";
+            cancelButton.style.borderRadius = "5px";
+            cancelButton.style.marginLeft = "10px";
+ 
+
+            cancelButton.onmouseover = function() {
+                cancelButton.style.backgroundColor = "darkgray";
+            };
+            cancelButton.onmouseout = function() {
+                cancelButton.style.backgroundColor = "blue";
+            };
+        }
+ 
+
+        window.onload = function() {
+            stylePage();
+            styleButtons();
+        };
+    </script>
 </head>
 <body>
-    <h1>Delete User</h1>
+    <div class="form-container">
+        <h1>Delete Employee</h1>
+ 
+        <form action="/users/delete/<%= user.id %>" method="post" onsubmit="confirmDeletion(event)">
+            <h3>
+                Are you sure you want to delete <%= user.name %>?
+            </h3>
+ 
 
-    <form action="/users/delete/<%= user.id %>" method="post">
-        <h3>
-            Are you sure you want to delete <%= user.name %>?
-        </h3>
+            <input type="submit" value="Delete">
+ 
 
-        <input type="submit" value="Submit">
-    </form> 
+            <button type="button" onclick="window.location.href='/users'" class="cancel-button">Cancel</button>
+        </form>
+    </div>
 </body>
 </html>

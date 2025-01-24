@@ -1,46 +1,74 @@
 <!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User List</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+
 <body>
-    <h1>User List</h1>
 
-    <% if (users && users.length > 0) { %>
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody>
-                <% users.forEach(user => { %>
+    <header class="top-section-users">
+        <div class="logo">
+            <img src="/images/Kainos 800x250 Logo (Transparent BG).png" alt="Company Logo" class="Company-Logo" />
+        </div>
+    </header>
+
+
+    <container class="user-list-container">
+        <h1>User List</h1>
+
+        <% if (users && users.length> 0) { %>
+            <table class="user-table">
+                <thead>
                     <tr>
-                        <td><%= user.name %></td>
-                        <td><%= user.email %></td>
-                        <td><%= user.role %></td>
-                        <td><a href="/users/<%= user.id %>">View</a></td>
-                        <td><a href="/users/update/<%= user.id %>">Edit</a></td>
-                        <td><a href="/users/delete/<%= user.id %>">Delete</a></td>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Actions</th>
                     </tr>
-                <% }); %>
-            </tbody>
-        </table>
-    <% } else { %>
-        <p>No users found.</p>
-    <% } %>
+                </thead>
+                <tbody>
+                    <% users.forEach(user=> { %>
+                        <tr>
+                            <td>
+                                <%= user.name %>
+                            </td>
+                            <td>
+                                <%= user.email %>
+                            </td>
+                            <td>
+                                <%= user.role %>
+                            </td>
+                            <td>
+                                <a class="btn-view" href="/users/<%= user.id %>">View</a>
+                                <a class="btn-edit" href="/users/update/<%= user.id %>">Edit</a>
+                                <a class="btn-delete" href="/users/delete/<%= user.id %>">Delete</a>
+                            </td>
+                        </tr>
+                        <% }); %>
+                </tbody>
+            </table>
+            <% } else { %>
+                <p>No users found.</p>
+                <% } %>
 
-    <form action="/users/add" method="get">
-        <input type="submit" value="Create New User">
-    </form> 
+                    <form action="/users/add" method="get" class="create-user-form">
+                        <input type="submit" value="Create New User" class="btn-create">
+                    </form>
+
+                    <a href="/" class="btn-home">Return to Home</a>
+                    </div>
+    </container>
+
+
+    <footer>
+        <p class="f1"> Kainos 4-6 Upper Cres, Belfast BT7 1NT</p>
+    </footer>
 </body>
+
 </html>
