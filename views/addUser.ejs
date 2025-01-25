@@ -1,26 +1,61 @@
 <!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New User</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
+
 <body>
-    <h1>Add New User</h1>
+    <header class="top-section">
+        <div class="logo">
+            <img src="/images/Kainos 800x250 Logo (Transparent BG).png" alt="Company Logo" class="Company-Logo" />
+        </div>
+    </header>
 
-    <form action="/users/add" method="post">
-        <label for="name">Name:</label><br>
-        <input type="name" id="name" name="name"><br>
+    <body>
 
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email"><br>
+        <form action="/users/add" method="post" class="addUser-form">
 
-        <label for="role">Role:</label><br>
-        <input type="role" id="role" name="role"><br>
+            <h1>Add New User</h1>
+            
+            <label for="employeeNumber">Employee Number:</label><br>
+            <input type="text" id="employeeNumber" name="employeeNumber" required><br>
 
-        <input type="submit" value="Submit">
-    </form> 
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+
+            <label for="role">Role:</label><br>
+            <input type="text" id="role" name="role" required><br>
+
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" required><br>
+
+            <label for="salary">Salary:</label><br>
+            <input type="text" id="salary" name="salary" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </body>
+
+    </html>
 </body>
+
+</html>
+
+<footer>
+    <p> Kainos 4-6 Upper Cres, Belfast BT7 1NT</p>
+</footer>
+</body>
+
 </html>

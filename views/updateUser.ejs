@@ -1,26 +1,33 @@
-<!-- index.ejs -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update User</title>
+    <link rel="icon" href="/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Update User</h1>
-
+ 
     <form action="/users/update/<%= user.id %>" method="post">
         <label for="name">Name:</label><br>
         <input type="text" id="name" name="name" value="<%= user.name %>"><br>
-
+ 
         <label for="email">Email:</label><br>
         <input type="email" id="email" name="email" value="<%= user.email %>"><br>
-
+ 
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" value="<%= user.address %>"><br>
+ 
+        <label for="salary">Salary:</label><br>
+        <input type="text" id="salary" name="salary" value="<%= user.salary %>" ><br>
+ 
         <label for="role">Role:</label><br>
         <input type="text" id="role" name="role" value="<%= user.role %>"><br>
-
+ 
         <input type="submit" value="Submit">
-    </form> 
+    </form>
+    <footer><p> Kainos 4-6 Upper Cres, Belfast BT7 1NT</p></footer>
 </body>
 </html>

@@ -1,8 +1,253 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* General styles */
+* {
+  box-sizing: border-box;
 }
 
-a {
-  color: #00B7FF;
+.user-list-container {
+  background-color: #ffffff;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px;
+  width: 80%;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.user-table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: #f2f2f2;
+}
+
+/* Buttons */
+.btn-view, .btn-edit, .btn-delete {
+  margin-right: 5px;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: white;
+  border-radius: 3px;
+}
+
+.btn-view {
+  background-color: #4CAF50;
+}
+
+.btn-edit {
+  background-color: #FFC107;
+}
+
+.btn-delete {
+  background-color: #F44336;
+}
+
+.create-user-form {
+  text-align: right;
+}
+
+.btn-create {
+  padding: 10px 20px;
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-create:hover {
+  background-color: #005f73;
+}
+
+h1 {
+  text-align: center;
+  color: #283583;
+}
+
+p {
+  font-size: 14px;
+  line-height: 21px;
+  color: #ffffff;
+  text-align: center;
+}
+
+h3 {
+  margin: 10px 0;
+  color: #41679f;
+}
+
+h6 {
+  margin: 5px 0;
+  text-transform: uppercase;
+  color: #a8a3a3;
+}
+
+/* Container styles */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  background-image: linear-gradient(to right top, #1a2447, #283583, #3b4da6, #5b6ec8, #7f93eb);
+  font-family: Montserrat, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.card-container {
+  background-color: #231E39;
+  border-radius: 25px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.35);
+  color: #B3B8CD;
+  padding: 30px 0 0;
+  position: relative;
+  width: 350px;
+  height: 550px;
+  max-width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+
+.card-container img {
+  border: 1px solid #41679f;
+  border-radius: 50%;
+  padding: 7px;
+  height: 150px;
+  width: 150px;
+}
+
+button.primary {
+  background-color: #41679f;
+  border: 1px solid #41679f;
+  border-radius: 3px;
+  color: #fff;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  padding: 10px 25px;
+}
+
+button.primary.ghost {
+  background-color: transparent;
+  color: #41679f;
+}
+
+.skills {
+  background-color: #1F1A36;
+  text-align: left;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+.skills ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills ul li {
+  border: 1px solid #2D2747;
+  border-radius: 2px;
+  display: inline-block;
+  font-size: 12px;
+  margin: 0 7px 7px 0;
+  padding: 7px;
+}
+
+
+.f1{
+  font-size: 1em;
+  padding-top: 5rem;
+  padding-left: 30rem;
+}
+
+header{
+  color: white;
+  position: relative; 
+  width: 100%;
+  height: 15%;
+  font-family: Galano Grotesque;
+}
+
+.hometitle{
+  font-size: 3.5em;
+  font-family: Galano Grotesque;
+  align-items: center;
+  color: white;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+.Company-Logo{
+  align-self: center;
+  padding-left: 20rem;
+  
+}
+
+.welcome{
+  font-size: 2em;
+  font-family: Galano Grotesque;
+
+}
+
+.main-section{
+  background-color: #f9f9f9;
+  padding-top: 1rem;
+  padding-bottom: 5rem;
+  width: 100%;
+
+}
+
+.main-section .welcome{
+  font-size: 3em;
+  padding-bottom: 2rem;
+  font-family: Galano Grotesque;
+  color: #283583;
+  height: 60%;
+}
+
+footer{
+  background-color: #283583;
+  color: white;
+  position: relative; 
+  width: 100%;
+  font-family: Galano Grotesque;
+  margin-top: 0rem;
+}
+
+.addUser-form{
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background-color: white;
+  width: 100%;
+  text-align: center;
 }

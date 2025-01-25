@@ -1,8 +1,60 @@
 [
   {
     "id": 1,
+    "employee number": "12345678",
     "name": "Shaun",
     "email": "shaun@test.com",
-    "role": "Software Engineer"
+    "password": "password",
+    "role": "Software Engineer",
+    "address": "1234 Main St",
+    "salary": "£50,000"
+  },
+  {
+    "id": 3,
+    "employee number": "34567890",
+    "name": "Abbey",
+    "email": "abbey@test.com",
+    "password": "password456",
+    "role": "Software Engineer",
+    "address": "742 Main St",
+    "salary": "£55,000"
+  },
+  {
+    "id": 3,
+    "employee number": "45678901",
+    "name": "John",
+    "email": "john@test.com",
+    "role": "Software Engineer",
+    "address": "111 Main St",
+    "salary": "£60,000"
+  },
+  {
+    "id": 4,
+    "employee number": "56789012",
+    "name": "Jennifer",
+    "email": "Abbey@test.com",
+    "role": "Software Engineer",
+    "address": "0 Main St",
+    "salary": "£58,000"
+  },
+  {
+    "employeeNumber": "5",
+    "name": "Thomas",
+    "email": "Thomas@kainos.com",
+    "password": "thomas",
+    "role": "team lead",
+    "address": "1 road ",
+    "salary": "£30000",
+    "id": 5
+  },
+  {
+    "employeeNumber": "6",
+    "name": "Thomas",
+    "email": "Thomas@kainos.com",
+    "password": "thomas",
+    "role": "team lead",
+    "address": "1 road ",
+    "salary": "£30000",
+    "id": 6
   }
 ]
